@@ -1,0 +1,1278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: PontopassAuth
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">PontopassAuth</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: PontopassAuth
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PontopassAuth</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">pontopass.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p><b> Descrição </b></p>
+
+<p>A classe pontopassAuth é utilizada para conexão e autenticação no sistema
+Pontopass. O Pontopass é um sistema para fácil implementação de
+autenticação em duas etapas, ou autenticação forte. Para utilizar o
+sistema, é necessário primeiro se cadastrar em <a
+href="https://pontopass.com">pontopass.com</a>. Para maiores detalhes,
+acesse <a href="https://pontopass.com">pontopass.com</a> e <a
+href="https://pontosec.com">pontosec.com</a>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="PontopassUser.html" title="PontopassUser (class)">PontopassUser</a></span></p>
+</div>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="api_server-classvariable" class="">@@api_server =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>atributos privados</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>api.pontopass.com</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="frameurl-classvariable" class="">@@frameurl =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>"localhost:3000"</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://widget.pontopass.com/v1.0.0/widget</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="token_type-classvariable" class="">@@token_type =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span> <span class='int'>1</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telefone</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>3</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>app</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>4</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="statustxt-classvariable" class="">@@statustxt =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>mensagens de status</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='int'>0</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sucesso</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>20</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro ao iniciar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>30</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Chave inv&amp;Atilde;&amp;iexcl;lida</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>100</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sess&amp;Atilde;&amp;pound;o criada</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>110</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Novo dispositivo permitido para o usu&amp;Atilde;&amp;iexcl;rio</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>115</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sem dispositivo cadastrado, permitir acesso</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>150</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro ao gravar session</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>151</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro ao gravar usu&amp;Atilde;&amp;iexcl;rio - Usu&amp;Atilde;&amp;iexcl;rio j&amp;Atilde;&amp;iexcl; existe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>152</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro ao gravar usu&amp;Atilde;&amp;iexcl;rio</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>153</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro ao deletar usu&amp;Atilde;&amp;iexcl;rio</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>155</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IP e/ou User Agent incorreto(s)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>210</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro de grava&amp;Atilde;&amp;sect;&amp;Atilde;&amp;pound;o no cache</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>220</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>310</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>320</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>400</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usu&amp;Atilde;&amp;iexcl;rio n&amp;Atilde;&amp;pound;o encontrado</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>405</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>410</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sess&amp;Atilde;&amp;pound;o n&amp;Atilde;&amp;pound;o encontrada</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>411</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Aplica&amp;Atilde;&amp;sect;&amp;Atilde;&amp;pound;o n&amp;Atilde;&amp;pound;o corresponde a session</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>413</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Session inv&amp;Atilde;&amp;iexcl;lida</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>415</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dispositivo n&amp;Atilde;&amp;pound;o encontrado</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>420</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>M&amp;Atilde;&amp;copy;todo n&amp;Atilde;&amp;pound;o encontrado</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>422</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Aplica&amp;Atilde;&amp;sect;&amp;Atilde;&amp;pound;o n&amp;Atilde;&amp;pound;o encontrada</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>425</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>M&amp;Atilde;&amp;copy;todo n&amp;Atilde;&amp;pound;o encontrado</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>440</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>450</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro Interno</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>490</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sem dispositivo cadastrado, bloquear acesso</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>492</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Telefone invalido</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>495</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Novo m&amp;Atilde;&amp;copy;todo inserido</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>510</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro na Liga&amp;Atilde;&amp;sect;&amp;Atilde;&amp;pound;o</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>520</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro no SMS</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>530</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro no mobile Token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>540</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro no Aplicativo Mobile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>600</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sem cr&amp;Atilde;&amp;copy;ditos dispon&amp;Atilde;&amp;shy;veis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>710</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Erro no Login</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>720</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IP Inv&amp;Atilde;&amp;iexcl;lido</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>800</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Aguardando resposta</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>810</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Login bloqueado - SMS</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>820</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Login bloqueado - Mobile Token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>830</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Login bloqueado - Chamada n&amp;Atilde;&amp;pound;o atendida</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>840</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Login bloqueado - Push / Telefone</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='int'>999</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sessão não iniciada ou não definida</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_agent-instance_method" title="#user_agent (instance method)">- (Object) <strong>user_agent</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>atributo que contem o user agent.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_ip-instance_method" title="#user_ip (instance method)">- (Object) <strong>user_ip</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>atributo que contem o user agent.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_session-instance_method" title="#user_session (instance method)">- (Object) <strong>user_session</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>numero da session do usuário.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ask-instance_method" title="#ask (instance method)">- (Object) <strong>ask</strong>(device_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>statusCode</p></td>
+<td>
+<p>Código do status do processo.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#checkAnswer-instance_method" title="#checkAnswer (instance method)">- (Object) <strong>checkAnswer</strong>(login) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>status</p></td>
+<td>
+<p>true ou false para autenticação da sessão atual.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init-instance_method" title="#init (instance method)">- (Object) <strong>init</strong>(username, use_widget = nil, user_remember = nil, user_ip = nil, user_agent = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Inicializa uma nova session para o usuário com Ip e user agent determinados
+automaticamente.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (PontopassAuth) <strong>initialize</strong>(api_id, api_key) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><ul><li>
+<p>Gera a classe com os dados de autenticação.</p>
+</li></ul>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lastStatus-instance_method" title="#lastStatus (instance method)">- (Object) <strong>lastStatus</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listMethods-instance_method" title="#listMethods (instance method)">- (Object) <strong>listMethods</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>NULL</p></td>
+<td>
+<p>caso não obtenha os dados corretamente</p>
+</td></tr><tr><td class="rdoc-term"><p>JSON</p></td>
+<td>
+<p>métodos de login do usuário.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (Object) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>status</p></td>
+<td>
+<p>true ou false para autenticação da sessão atual.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">- (Object) <strong>validate</strong>(answer, token_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>statusCode</p></td>
+<td>
+<p>Código do status do processo.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#widget-instance_method" title="#widget (instance method)">- (Object) <strong>widget</strong>(return_url, h = 500, w = 500, return_method = &quot;POST&quot;, post = nil, get = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saída</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>frame</p></td>
+<td>
+<p>Frame contendo o widget javascript, no tamanho informado.</p>
+</td></tr></table>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="PontopassAuth (class)">PontopassAuth</a></span></tt>) <strong>initialize</strong>(api_id, api_key) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <ul><li>
+<p>Gera a classe com os dados de autenticação.</p>
+</li></ul>
+
+<p><b>Parâmetros</b></p>
+
+<p><b>Entrada</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>api_id</p></td>
+<td>
+<p>ID de autenticação da API Pontopass</p>
+</td></tr><tr><td class="rdoc-term"><p>api_key</p></td>
+<td>
+<p>Chave para acesso na API Pontopass</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_api_id'>api_id</span><span class='comma'>,</span> <span class='id identifier rubyid_api_key'>api_key</span><span class='rparen'>)</span>
+   	<span class='ivar'>@api_id</span> <span class='op'>=</span> <span class='id identifier rubyid_api_id'>api_id</span>
+	<span class='ivar'>@api_key</span> <span class='op'>=</span> <span class='id identifier rubyid_api_key'>api_key</span>
+	<span class='ivar'>@user_agent</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>HTTP_USER_AGENT</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@user_ip</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_ADDR</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@user_remember</span> <span class='op'>=</span> <span class='int'>0</span>
+	<span class='ivar'>@integration_type</span> <span class='op'>=</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="user_agent=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="user_agent-instance_method">
+  
+    - (<tt>Object</tt>) <strong>user_agent</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>atributo que contem o user agent. Atribuido automaticamente pelo header
+'HTTP_USER_AGENT'</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_agent'>user_agent</span>
+  <span class='ivar'>@user_agent</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="user_ip=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="user_ip-instance_method">
+  
+    - (<tt>Object</tt>) <strong>user_ip</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>atributo que contem o user agent. Atribuido automaticamente pelo header
+'REMOTE_ADDRESS'</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_ip'>user_ip</span>
+  <span class='ivar'>@user_ip</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="user_session=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="user_session-instance_method">
+  
+    - (<tt>Object</tt>) <strong>user_session</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>numero da session do usuário. Atribuído automaticamente após a execução do
+método init</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_session'>user_session</span>
+  <span class='ivar'>@user_session</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="ask-instance_method">
+  
+    - (<tt>Object</tt>) <strong>ask</strong>(device_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>statusCode</p></td>
+<td>
+<p>Código do status do processo</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ask'>ask</span><span class='lparen'>(</span><span class='id identifier rubyid_device_id'>device_id</span><span class='rparen'>)</span> 
+		<span class='kw'>if</span> <span class='ivar'>@user_session</span>
+			<span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ask/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_session</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_device_id'>device_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_user_agent'>user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='int'>999</span>
+		<span class='kw'>else</span> 
+			<span class='kw'>return</span> <span class='int'>999</span><span class='semicolon'>;</span>
+		<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="checkAnswer-instance_method">
+  
+    - (<tt>Object</tt>) <strong>checkAnswer</strong>(login) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>status</p></td>
+<td>
+<p>true ou false para autenticação da sessão atual</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 288</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_checkAnswer'>checkAnswer</span><span class='lparen'>(</span><span class='id identifier rubyid_login'>login</span><span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='kw'>not</span> <span class='ivar'>@user_session</span> 
+		<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pontopass_session</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+			<span class='ivar'>@user_session</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pontopass_session</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+	<span class='kw'>if</span> <span class='kw'>not</span> <span class='ivar'>@user_session</span>
+		<span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pontopass_session</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='ivar'>@user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>login</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+			<span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>login</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_login'>login</span>
+		<span class='kw'>else</span>
+			<span class='kw'>false</span>
+		<span class='kw'>end</span>
+	<span class='kw'>else</span>
+		<span class='kw'>false</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init-instance_method">
+  
+    - (<tt>Object</tt>) <strong>init</strong>(username, use_widget = nil, user_remember = nil, user_ip = nil, user_agent = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Inicializa uma nova session para o usuário com Ip e user agent determinados
+automaticamente.</p>
+
+<p><b>Parâmetros</b></p>
+
+<p><b>Entrada</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>username</p></td>
+<td>
+<p>Login do usuário</p>
+</td></tr><tr><td class="rdoc-term"><p>use_widget</p></td>
+<td>
+<p>false: Utiliza API; true: Utiliza Widget JavaScript <em>(default =
+false)</em></p>
+</td></tr><tr><td class="rdoc-term"><p>save_session</p></td>
+<td>
+<p>false: não grava a session; true: grava a session no database<em>(default =
+false)</em></p>
+</td></tr></table>
+
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Status 0</p></td>
+<td>
+<p>OK</p>
+</td></tr><tr><td class="rdoc-term"><p>Status 999</p></td>
+<td>
+<p>ERROR</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init'>init</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span><span class='id identifier rubyid_use_widget'>use_widget</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span><span class='id identifier rubyid_user_remember'>user_remember</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span><span class='id identifier rubyid_user_ip'>user_ip</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span><span class='id identifier rubyid_user_agent'>user_agent</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+	<span class='ivar'>@integration_type</span> <span class='op'>=</span> <span class='id identifier rubyid_use_widget'>use_widget</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>:</span> <span class='int'>0</span>
+	<span class='ivar'>@user_remember</span> <span class='op'>=</span> <span class='id identifier rubyid_user_remember'>user_remember</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>:</span> <span class='int'>0</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_user_ip'>user_ip</span>
+		<span class='ivar'>@user_ip</span> <span class='op'>=</span> <span class='id identifier rubyid_user_ip'>user_ip</span>
+	<span class='kw'>end</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_user_agent'>user_agent</span> 
+		<span class='ivar'>@user_agent</span> <span class='op'>=</span> <span class='id identifier rubyid_user_agent'>user_agent</span>
+	<span class='kw'>end</span>
+	<span class='ivar'>@user</span> <span class='op'>=</span> <span class='id identifier rubyid_username'>username</span>
+
+	<span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>init/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_username'>username</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@integration_type</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_remember</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='ivar'>@user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='semicolon'>;</span>
+	
+	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>session</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='ivar'>@user_session</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>session</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='int'>999</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lastStatus-instance_method">
+  
+    - (<tt>Object</tt>) <strong>lastStatus</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lastStatus'>lastStatus</span>
+	<span class='cvar'>@@statustxt</span><span class='lbracket'>[</span><span class='ivar'>@status</span><span class='rbracket'>]</span><span class='semicolon'>;</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listMethods-instance_method">
+  
+    - (<tt>Object</tt>) <strong>listMethods</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>NULL</p></td>
+<td>
+<p>caso não obtenha os dados corretamente</p>
+</td></tr><tr><td class="rdoc-term"><p>JSON</p></td>
+<td>
+<p>métodos de login do usuário.</p>
+</td></tr></table>
+
+<p><b>Campos:</b> <tt>{&quot;description&quot;:&quot;descrição&quot;,
+&quot;id&quot;:&quot;Id do método&quot;, &quot;number&quot;:&quot;número de
+telefone&quot;, &quot;token_type&quot;:&quot;tipo de método&quot;}</tt></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listMethods'>listMethods</span><span class='lparen'>(</span><span class='rparen'>)</span>
+	<span class='ivar'>@user_session</span> <span class='op'>?</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>list/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_session</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='ivar'>@user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>false</span> 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="status-instance_method">
+  
+    - (<tt>Object</tt>) <strong>status</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>status</p></td>
+<td>
+<p>true ou false para autenticação da sessão atual</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span><span class='lparen'>(</span><span class='rparen'>)</span>	
+	<span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_session</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='ivar'>@user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='int'>999</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    - (<tt>Object</tt>) <strong>validate</strong>(answer, token_type) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>statusCode</p></td>
+<td>
+<p>Código do status do processo</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 235</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span><span class='id identifier rubyid_token_type'>token_type</span><span class='rparen'>)</span>
+		<span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@user_session</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>validate/</span><span class='embexpr_beg'>#{</span><span class='cvar'>@@token_type</span><span class='lbracket'>[</span><span class='id identifier rubyid_token_type'>token_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_session</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answer'>answer</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_ip</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_user_agent'>user_agent</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comment'># ? ret[&quot;status&quot;] : 999
+</span>		<span class='kw'>else</span>
+<span class='int'>999</span>
+		<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="widget-instance_method">
+  
+    - (<tt>Object</tt>) <strong>widget</strong>(return_url, h = 500, w = 500, return_method = &quot;POST&quot;, post = nil, get = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><b>Saída</b></p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>frame</p></td>
+<td>
+<p>Frame contendo o widget javascript, no tamanho informado</p>
+</td></tr></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'pontopass.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_widget'>widget</span><span class='lparen'>(</span><span class='id identifier rubyid_return_url'>return_url</span><span class='comma'>,</span> <span class='id identifier rubyid_h'>h</span><span class='op'>=</span><span class='int'>500</span><span class='comma'>,</span> <span class='id identifier rubyid_w'>w</span><span class='op'>=</span><span class='int'>500</span><span class='comma'>,</span> <span class='id identifier rubyid_return_method'>return_method</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>POST</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_post'>post</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_get'>get</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_postparams'>postparams</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> 
+	<span class='id identifier rubyid_getparams'>getparams</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_post'>post</span>
+			<span class='id identifier rubyid_post'>post</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span> 
+				<span class='id identifier rubyid_postparams'>postparams</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>post_$</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&quot;</span></span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_get'>get</span> 
+			<span class='id identifier rubyid_get'>get</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span> 
+				<span class='id identifier rubyid_getparams'>getparams</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_$</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&quot;</span></span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@frameurl</span><span class='rbrace'>}</span><span class='tstring_content'>?#pontopass_save=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_remember</span><span class='rbrace'>}</span><span class='tstring_content'>&amp;pontopass_url=</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='ivar'>@return_url</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&amp;pontopass_sess=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user_session</span><span class='rbrace'>}</span><span class='tstring_content'>&amp;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_postparams'>postparams</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_getparams'>getparams</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;iframe src='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>' width='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_w'>w</span><span class='rbrace'>}</span><span class='tstring_content'>' height='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_h'>h</span><span class='rbrace'>}</span><span class='tstring_content'>' frameBorder='0'&gt;&lt;/iframe&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Jul 30 13:58:39 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
